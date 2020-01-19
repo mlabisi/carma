@@ -8,7 +8,7 @@ class Messages extends Component {
             return ( <li key={i}><CarListing data={listing} /></li>)
         })
         return ( <div>
-                {(this.props.listings.length > 0) ? <ul>{listings}</ul> : <div> You haven't started any conversations yet!</div>}
+                 <div> You haven't started any conversations yet!</div>
         </div>)
     }
 }

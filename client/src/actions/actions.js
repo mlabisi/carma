@@ -6,3 +6,22 @@ function listingAdded(listing) {
         listing: listing
     }
 }
+
+function detailsReceived(details) {
+    return {
+        type: actionTypes.DETAILS_RECEIVED,
+        details: details
+    }
+}
+
+export function fetchListings(fakeListing) {
+    return dispatch => {
+        dispatch(listingAdded(fakeListing));
+    }
+}
+
+export function fetchDetails(fakeDetails) {
+    return dispatch => {
+        dispatch(detailsReceived(fakeDetails))
+    }
+}

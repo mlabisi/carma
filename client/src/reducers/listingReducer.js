@@ -1,7 +1,8 @@
 import constants from '../constants/actionTypes'
 
 let initialState = {
-    listings: []
+    listings: [],
+    details: {}
 };
 
 export default (state = initialState, action) => {
@@ -9,8 +10,11 @@ export default (state = initialState, action) => {
 
     switch (action.type) {
         case constants.LISTING_ADDED:
-            updated['listings'] = action.listing
-            return updated
+            updated['listings'] = action.listing;
+            return updated;
+        case constants.DETAILS_RECEIVED:
+            updated['details'] = action.details;
+            return updated;
         default:
             return state
     }

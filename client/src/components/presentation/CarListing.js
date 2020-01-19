@@ -6,7 +6,7 @@ class CarListing extends Component {
     render() {
         return (
             <div>
-                <div><Link to={`/listing/${this.props.data.id}`}><b>{this.props.title}</b></Link></div>
+                <h4> <Link to={`/listing/${this.props.data.id}`}>{this.props.data.title}</Link></h4>
                 <div>{this.props.data.teaser}</div>
             </div>
         )

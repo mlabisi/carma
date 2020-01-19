@@ -9,7 +9,7 @@ class Likes extends Component {
         })
         return ( <div>
             <h2>Vehicles You've Liked</h2>
-                {(this.props.listings.length > 0) ? <ul>{listings}</ul> : <div> You haven't liked any vehicles yet!</div>}
+                <div> You haven't liked any vehicles yet!</div>
         </div>)
     }
 }
