@@ -21,17 +21,47 @@ function profileReceived(profile) {
     }
 }
 
+function saleItemsReceived(items) {
+    return {
+        type: actionTypes.SALE_ITEMS_RECEIVED,
+        items: items
+    }
+}
+
+function likeReceived(like) {
+    return {
+        type: actionTypes.LIKES_RECEIVED,
+        like: like
+    }
+}
+
+function loggedIn() {
+    return {
+        type: actionTypes.LOGGED_IN,
+        me: '4'
+    }
+}
+
 function detailsLoading() {
     return {
         type: actionTypes.DETAILS_LOADING
     }
 }
 
-export function fetchListings() {
+export function fetchListings(id) {
     return dispatch => {
-        return fetch(`/listings`)
+        return fetch(`/listings/all/${id}`)
             .then( (response) => response.json() )
             .then( (data) => dispatch(listingReceived(data.data)))
+            .catch( (e) => console.log(e));
+    }
+}
+
+export function fetchForSale(sellerId) {
+    return dispatch => {
+        return fetch(`/sell/${sellerId}`)
+            .then( (response) => response.json() )
+            .then( (data) => dispatch(saleItemsReceived(data.data)))
             .catch( (e) => console.log(e));
     }
 }
@@ -51,5 +81,20 @@ export function fetchProfile(id) {
             .then((response)=> response.json())
             .then((data)=> dispatch(profileReceived(data.data)))
             .catch((e) => console.log(e));
+    }
+}
+
+export function fetchLikes(id) {
+    return dispatch => {
+        return fetch(`/likes/${id}`)
+            .then((response)=> response.json())
+            .then((data)=> dispatch(likeReceived(data.data)))
+            .catch((e) => console.log(e));
+    }
+}
+
+export function fetchCurrentId() {
+    return dispatch => {
+            dispatch(loggedIn())
     }
 }

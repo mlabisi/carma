@@ -6,7 +6,7 @@ import {fetchListings} from "../../actions/actions";
 class Discover extends Component {
 
     componentDidMount() {
-        this.props.dispatch(fetchListings());
+        this.props.dispatch(fetchListings(this.props.me));
     }
 
     render () {

@@ -11,7 +11,7 @@ class Account extends Component {
         })
         return ( <div>
             <h2>Mora Labisi</h2>
-            <img src={"https://render.bitstrips.com/v2/cpanel/1547fdf4-2759-4056-a006-1e77ad12e568-9da27b08-ce33-4315-8735-f05220d96544-v1.png?transparent=1&palette=1"}/>
+            <img src={""}/>
             <div><Link to={'/preferences'}>Preferences</Link></div>
             <Likes/>
         </div>)

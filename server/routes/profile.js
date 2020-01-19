@@ -19,6 +19,13 @@ const fakeProfiles = [{
         sellerId: '3',
         name: 'Billy Bronco',
         pic: 'https://pbs.twimg.com/profile_images/423624945802153985/wDPO-ztt.jpeg',
+        rating: '★★☆☆☆',
+        specs: 'KBB/AT Specs',
+    },
+    {
+        sellerId: '4',
+        name: 'Mora Labisi',
+        pic: 'https://render.bitstrips.com/v2/cpanel/1547fdf4-2759-4056-a006-1e77ad12e568-9da27b08-ce33-4315-8735-f05220d96544-v1.png?transparent=1&palette=1',
         rating: '★★★★★',
         specs: 'KBB/AT Specs',
     }];

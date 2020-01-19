@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const fakeListings = [{
+const myFakeListings = [{
     id: '1',
     title: 'Hyundai Accent',
     teaser: 'Used | 2012 | Torrance, CA',
     specs: 'KBB/AT Specs',
     sellerId: '1'
-    },
+},
     {
         id: '2',
         title: 'Tesla Model 3',
@@ -37,23 +37,13 @@ const fakeListings = [{
         sellerId: '1'
     }];
 
-router.get('/all/:id', function (req, res, next) {
-    const id = req.params.id;
-
-    const listings = fakeListings.filter(obj => obj.sellerId !== id);
-
-    res.status(200).send({
-        data: listings
-    })
-});
-
 router.get('/:id', function (req, res, next) {
     const id = req.params.id;
 
-    const listing = fakeListings.find(obj => obj.id === id);
+    const saleItems = myFakeListings.filter(obj => obj.sellerId === id);
 
     res.status(200).send({
-        data: listing
+        data: saleItems
     })
 });
 

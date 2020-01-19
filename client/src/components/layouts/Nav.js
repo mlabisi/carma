@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom'
+import {connect} from "react-redux";
 
-class Nav extends Component{
+class Nav extends Component {
     render() {
         return (
             <div>
@@ -11,10 +12,9 @@ class Nav extends Component{
                 <div>
                     {this.props.children}
                     <ul>
-                        <li><Link to={'/'}>Discover</Link></li>
+                        <li><Link to={`/`}>Discover</Link></li>
                         <li><Link to={'/sell'}>Sell</Link></li>
                         <li><Link to={'/likes'}>Likes</Link></li>
-                        <li><Link to={'/messages'}>Messages</Link></li>
                         <li><Link to={'/account'}>My Account</Link></li>
                     </ul>
                 </div>

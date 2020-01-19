@@ -8,7 +8,6 @@ import AccountPage from './components/layouts/AccountPage';
 import DiscoverPage from './components/layouts/DiscoverPage';
 import LikesPage from "./components/layouts/LikesPage";
 import Listing from "./components/containers/Listing";
-import MessagesPage from "./components/layouts/MessagesPage";
 import Profile from "./components/containers/Profile";
 import SellPage from "./components/layouts/SellPage";
 import PreferencesPage from "./components/layouts/PreferencesPage";
@@ -23,7 +22,6 @@ class App extends Component {
             <Route exact path='/' component={DiscoverPage} />
             <Route path='/likes' component={LikesPage} />
             <Route path='/sell' component={SellPage} />
-            <Route path='/messages' component={MessagesPage} />
             <Route path='/account' component={AccountPage} />
             <Route path='/preferences' component={PreferencesPage} />
             <Route path='/listing/:id' component={Listing} />

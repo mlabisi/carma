@@ -4,6 +4,9 @@ let initialState = {
     listings: [],
     details: {},
     profile: {},
+    saleItems: [],
+    likes: [],
+    me: '4',
     detailsLoading: true
 };
 
@@ -23,6 +26,15 @@ export default (state = initialState, action) => {
             return updated;
         case constants.PROFILE_RECEIVED:
             updated['profile'] = action.profile;
+            return updated;
+        case constants.SALE_ITEMS_RECEIVED:
+            updated['saleItems'] = action.items;
+            return updated;
+        case constants.LIKES_RECEIVED:
+            updated['likes'] = action.like;
+            return updated;
+        case constants.LOGGED_IN:
+            updated['me'] = '4';
             return updated;
         default:
             return state
