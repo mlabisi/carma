@@ -8,7 +8,7 @@ class Sell extends Component {
             return ( <li key={i}><CarListing data={listing} /></li>)
         })
         return ( <div>
-            {(this.props.listings.length > 0) ? <ul>{listings}</ul> : <div> Sorry! Looks like there are no listings right now.</div>}
+            {(this.props.listings.length > 0) ? <ul>{listings}</ul> : <div> Sorry! Looks you haven't made any listings yet.</div>}
             <div>List A Vehicle (make this a tooltip button)</div>
         </div>)
     }

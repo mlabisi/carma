@@ -9,6 +9,7 @@ import DiscoverPage from './components/layouts/DiscoverPage';
 import LikesPage from "./components/layouts/LikesPage";
 import MessagesPage from "./components/layouts/MessagesPage";
 import SellPage from "./components/layouts/SellPage";
+import PreferencesPage from "./components/layouts/PreferencesPage";
 import Nav from "./components/layouts/Nav";
 import CarListingDetail from "./components/presentation/CarListingDetail";
 
@@ -23,6 +24,7 @@ class App extends Component {
             <Route path='/sell' component={SellPage} />
             <Route path='/messages' component={MessagesPage} />
             <Route path='/account' component={AccountPage} />
+            <Route path='/preferences' component={PreferencesPage} />
             <Route path='/listing/:id' component={CarListingDetail} />
             <Route path='/profile/:id' component={CarListingDetail} />
           </Nav>

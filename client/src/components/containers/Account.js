@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 import CarListing from "../presentation/CarListing";
 import {connect} from 'react-redux'
+import Likes from "./Likes";
 
 class Account extends Component {
     render () {
@@ -10,8 +12,8 @@ class Account extends Component {
         return ( <div>
             <h2>Name</h2>
             <div>ProfilePic</div>
-            <div>Link to Preferences</div>
-                {(this.props.listings.length > 0) ? <ul>{listings}</ul> : <div> Sorry! Looks like there are no listings right now.</div>}
+            <div><Link to={'/preferences'}>Preferences</Link></div>
+            <Likes/>
         </div>)
     }
 }
