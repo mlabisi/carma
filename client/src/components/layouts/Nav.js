@@ -12,7 +12,10 @@ class Nav extends Component{
                     {this.props.children}
                     <ul>
                         <li><Link to={'/'}>Discover</Link></li>
-                        <li><Link to={'/matches'}>Matches</Link></li>
+                        <li><Link to={'/sell'}>Sell</Link></li>
+                        <li><Link to={'/likes'}>Likes</Link></li>
+                        <li><Link to={'/messages'}>Messages</Link></li>
+                        <li><Link to={'/account'}>My Account</Link></li>
                     </ul>
                 </div>
             </div>

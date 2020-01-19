@@ -5,9 +5,9 @@ class DiscoverPage extends Component {
     render() {
         return (
             <div>
-                <div> Welcome to Carma </div>
+                <div> <h1>Your Personal Marketplace</h1> </div>
                 <div>
-                    <Discover />
+                    <Discover/>
                 </div>
             </div>
         )
