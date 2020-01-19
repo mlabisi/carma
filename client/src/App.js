@@ -13,7 +13,6 @@ import Profile from "./components/containers/Profile";
 import SellPage from "./components/layouts/SellPage";
 import PreferencesPage from "./components/layouts/PreferencesPage";
 import Nav from "./components/layouts/Nav";
-import CarListingDetail from "./components/presentation/CarListingDetail";
 
 class App extends Component {
   render() {

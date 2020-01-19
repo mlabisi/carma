@@ -16,7 +16,7 @@ class Sell extends Component {
 
 const mapStateToProps = state => {
     return {
-        listings: state.listings.listings
+        listings: state.store.listings
     }
 }
 export default connect(mapStateToProps)(Sell)

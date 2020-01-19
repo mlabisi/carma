@@ -4,7 +4,7 @@ import listingReducer from '../reducers/listingReducer';
 
 const store = createStore(
     combineReducers({
-        listings: listingReducer
+        store: listingReducer
     }),
     applyMiddleware(
         thunk

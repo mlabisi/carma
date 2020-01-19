@@ -1,13 +1,29 @@
 import React, {Component} from 'react'
+import ProfileDetails from "../presentation/ProfileDetails";
+import {connect} from 'react-redux'
+import {fetchProfile} from "../../actions/actions"
 
 class Profile extends Component {
+    componentDidMount() {
+        this.props.dispatch(fetchProfile(this.props.match.params.id))
+    }
+
     render () {
-        return ( <div>
-            <h2>Denise Tran</h2>
-            <img src={"https://i.pinimg.com/originals/d0/92/1e/d0921e50a51ec10ec77918551c03c6d2.png"}/>
-            <div>KBB/AT Info</div>
-        </div>)
+        return (
+            <div>
+               <h2>Seller Profile</h2>
+                <ul>
+                   <div><ProfileDetails profile = {this.props.profile} /></div>
+                </ul>
+        </div>
+        )
     }
 }
 
-export default Profile
+const mapStateToProps = state => {
+    return {
+        profile: state.store.profile
+    }
+};
+
+export default connect(mapStateToProps)(Profile)
