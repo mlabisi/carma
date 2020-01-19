@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Discover from "../containers/Discover"
 
-class Discover extends Component {
+class DiscoverPage extends Component {
     render() {
         return (
             <div>
@@ -14,4 +14,4 @@ class Discover extends Component {
     }
 }
 
-export default Discover;
+export default DiscoverPage;
