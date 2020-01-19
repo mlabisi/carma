@@ -3,24 +3,29 @@ import {Link} from 'react-router-dom'
 import CarListing from "../presentation/CarListing";
 import {connect} from 'react-redux'
 import Likes from "./Likes";
+import {fetchProfile} from "../../actions/actions";
+import ProfileDetails from "../presentation/ProfileDetails";
 
 class Account extends Component {
-    render () {
-        const listings = this.props.listings.map( (listing, i) => {
-            return ( <li key={i}><CarListing data={listing} /></li>)
-        })
-        return ( <div>
-            <h2>Mora Labisi</h2>
-            <img src={""}/>
-            <div><Link to={'/preferences'}>Preferences</Link></div>
-            <Likes/>
-        </div>)
+    componentDidMount() {
+        this.props.dispatch(fetchProfile(this.props.me))
+    }
+
+    render() {
+        return (
+            <div>
+                <div><ProfileDetails profile={this.props.profile}/></div>
+                <div><Link to={'/preferences'}>Preferences</Link></div>
+                <h2>My Likes</h2>
+                <Likes me={this.props.me}/>
+            </div>)
     }
 }
 
 const mapStateToProps = state => {
     return {
-        listings: state.store.listings
+        profile: state.store.profile
     }
-}
+};
+
 export default connect(mapStateToProps)(Account)
